@@ -1,5 +1,135 @@
+// Variable
+// Color variable
+$primaryRed: hsl(0, 78%, 62%);
+$primaryCyan: hsl(180, 62%, 55%);
+$primaryOrange: hsl(34, 97%, 64%);
+$primaryBlue: hsl(212, 86%, 64%);
+
+$neutralDarkBlue: hsl(234, 12%, 34%);
+$neutralGrayishBlue: hsl(229, 6%, 66%);
+$neutralLightGray: hsl(0, 0%, 98%);
+
+// Font variable
+$font: 'Poppins',
+sans-serif;
+$fontSize: 15px;
+
+// breakpoints
+$medium-screen: 620px;
+
+// Mixin
+@mixin medium-screen {
+   @media (min-width: #{$medium-screen}) {
+      @content;
+   }
+}
+
 * {
    margin: 0;
    padding: 0;
    box-sizing: border-box;
+}
+
+body {
+   font-family: $font;
+   font-size: $fontSize;
+   color: $neutralGrayishBlue;
+   background-color: $neutralLightGray;
+}
+
+.container {
+   width: 80%;
+   margin: 0 auto;
+   max-width: 1200px;
+   padding: 4em 0;
+
+   @include medium-screen {
+      padding: 0;
+   }
+}
+
+.hero {
+   min-height: 30vh;
+   text-align: center;
+
+   @include medium-screen {
+      max-width: 500px;
+      margin: 0 auto;
+      padding: 2em 0;
+      min-height: 20vh;
+   }
+
+   &__title {
+      font-weight: 400;
+      padding-bottom: 1em;
+
+      &--dark {
+         color: $neutralDarkBlue;
+         font-weight: 600;
+      }
+   }
+
+   p {
+
+      font-weight: 200;
+   }
+}
+
+.card--section {
+
+   @include medium-screen {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+      align-items: center;
+      flex: 1;
+      flex-wrap: wrap;
+      flex-basis: 30em;
+   }
+
+   .card {
+      max-width: 320px;
+      height: auto;
+      margin: 2em 0;
+      border-radius: .5em;
+      box-shadow: 0px 1px 20px 0px $neutralGrayishBlue;
+
+      &--cyan {
+         border-top: 5px solid $primaryCyan;
+      }
+
+      &--red {
+         border-top: 5px solid $primaryRed;
+      }
+
+      &--orange {
+         border-top: 5px solid $primaryOrange;
+      }
+
+      &--blue {
+         border-top: 5px solid $primaryBlue;
+      }
+
+      &__content {
+         padding: 1em;
+         display: flex;
+         flex-direction: column;
+
+         &--title {
+            color: $neutralDarkBlue;
+            font-weight: 900;
+         }
+
+         p {
+            font-weight: 200;
+            ;
+         }
+
+         &--icon {
+            align-self: flex-end;
+            justify-self: flex-end;
+            padding-top: 3em;
+         }
+      }
+   }
 }

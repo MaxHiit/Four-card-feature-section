@@ -1,0 +1,131 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-size: 15px;
+  color: #a3a5ae;
+  background-color: #fafafa;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 4em 0;
+}
+
+@media (min-width: 620px) {
+  .container {
+    padding: 0;
+  }
+}
+
+.hero {
+  min-height: 30vh;
+  text-align: center;
+}
+
+@media (min-width: 620px) {
+  .hero {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 2em 0;
+    min-height: 20vh;
+  }
+}
+
+.hero__title {
+  font-weight: 400;
+  padding-bottom: 1em;
+}
+
+.hero__title--dark {
+  color: #4c4e61;
+  font-weight: 600;
+}
+
+.hero p {
+  font-weight: 200;
+}
+
+@media (min-width: 620px) {
+  .card--section {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -ms-flex-preferred-size: 30em;
+        flex-basis: 30em;
+  }
+}
+
+.card--section .card {
+  max-width: 320px;
+  height: auto;
+  margin: 2em 0;
+  border-radius: .5em;
+  -webkit-box-shadow: 0px 1px 20px 0px #a3a5ae;
+          box-shadow: 0px 1px 20px 0px #a3a5ae;
+}
+
+.card--section .card--cyan {
+  border-top: 5px solid #45d3d3;
+}
+
+.card--section .card--red {
+  border-top: 5px solid #ea5353;
+}
+
+.card--section .card--orange {
+  border-top: 5px solid #fcaf4a;
+}
+
+.card--section .card--blue {
+  border-top: 5px solid #549ef2;
+}
+
+.card--section .card__content {
+  padding: 1em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.card--section .card__content--title {
+  color: #4c4e61;
+  font-weight: 900;
+}
+
+.card--section .card__content p {
+  font-weight: 200;
+}
+
+.card--section .card__content--icon {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  justify-self: flex-end;
+  padding-top: 3em;
+}
